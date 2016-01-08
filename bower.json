@@ -1,12 +1,12 @@
 {
-  "name": "AutoRelease",
+  "name": "auto-release",
   "main": "src/AutoRelease.js",
   "version": "0.0.0",
   "authors": [
     "hooriza"
   ],
   "license": "MIT",
-  "homepage": "http://git.linecorp.com/hooriza-com/AutoRelease",
+  "homepage": "http://git.linecorp.com/hooriza-com/auto-release",
   "dependencies": {},
   "ignore": [
     "**/.*",
