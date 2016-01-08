@@ -1,0 +1,22 @@
+{
+  "name": "AutoRelease",
+  "main": "src/AutoRelease.js",
+  "version": "0.0.0",
+  "authors": [
+    "hooriza"
+  ],
+  "license": "MIT",
+  "homepage": "http://git.linecorp.com/hooriza-com/AutoRelease",
+  "dependencies": {},
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "zeptojs": "~1.1.6",
+    "jquery": "~2.1.4"
+  }
+}
