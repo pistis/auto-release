@@ -270,7 +270,13 @@ var AutoRelease = (function(jQuery) {
 
 	var AR = function() {
 		this._idx = Math.random();
-		this._items = null;
+		this._items = [];
+
+		for (var name in lists) {
+			if (lists.hasOwnProperty(name)) {
+				this[name] = this._alloc(name);
+			}
+		}
 	};
 
 	AR.prototype._alloc = function(name) {
@@ -283,39 +289,13 @@ var AutoRelease = (function(jQuery) {
 		};
 	};
 
-	AR.prototype.initialize = function() {
-
-		if (this._items) { this.release(); }
-		this._items = [];
-
-		// console.log('INITIALIZE', this._idx);
-
-		for (var name in lists) {
-			if (lists.hasOwnProperty(name)) {
-				this[name] = this._alloc(name);
-			}
-		}
-
-		return this;
-
-	};
-
 	AR.prototype.release = function() {
-
-		if (!this._items) { return this; }
 		var items = this._items;
-
-		// console.log('RELEASE', this._idx, items.length);
-
 		for (var i = 0, item; !!(item = items[i]); i++) {
 			item.release();
 		}
-
 		items.length = 0;
-		this._items = items = null;
-
 		return this;
-
 	};
 
 	return AR;
