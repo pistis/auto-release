@@ -140,6 +140,9 @@ var AutoRelease = (function(jQuery) {
 			function alloc(els, props) {
 
 				var props = props || [ 'className', 'name', 'value', 'checked', 'placeholder', 'style.cssText' ];
+				if (!('length' in els && 'length' in props)) {
+					throw new Error('els and props should be Array like.');
+				}
 
 				for (var i = 0, len = els.length; i < len; i++) {
 
