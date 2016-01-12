@@ -300,5 +300,5 @@ var AutoRelease = (function(jQuery) {
 
 	return AR;
 
-})(window.jQuery||window.zepto);
+})(window.jQuery||window.Zepto);
 
