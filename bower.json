@@ -1,6 +1,6 @@
 {
   "name": "auto-release",
-  "main": "src/AutoRelease.js",
+  "main": "src/auto-release.js",
   "version": "0.0.0",
   "authors": [
     "hooriza"
