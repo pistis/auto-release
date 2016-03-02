@@ -5,7 +5,7 @@
 
 ### 설치
 ```
-bower install http://git.linecorp.com/hooriza-com/auto-release.git
+bower install https://github.com/hooriza/auto-release.git
 ```
 
 ### 예제로 이해하는 사용방법
