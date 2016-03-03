@@ -3,7 +3,7 @@
   "main": "src/auto-release.js",
   "version": "0.0.0",
   "authors": [
-    "hooriza"
+    "hooriza <hooriza@gmail.com>"
   ],
   "license": "MIT",
   "homepage": "https://github.com/hooriza/auto-release",
