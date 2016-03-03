@@ -6,7 +6,7 @@
     "hooriza"
   ],
   "license": "MIT",
-  "homepage": "http://git.linecorp.com/hooriza-com/auto-release",
+  "homepage": "https://github.com/hooriza/auto-release",
   "dependencies": {},
   "ignore": [
     "**/.*",
