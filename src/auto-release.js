@@ -1,5 +1,11 @@
-var AutoRelease = (function(jQuery) {
-
+(function(factory) {
+	var jQuery = window.jQuery||window.Zepto;
+	if (typeof module === 'object' && typeof module.exports === 'object') {
+		module.exports = factory(jQuery);
+	} else {
+		window.Pages = factory(jQuery);
+	}
+}(function(jQuery) {
 	var lists = {
 		timeout : function() {
 
@@ -199,10 +205,8 @@ var AutoRelease = (function(jQuery) {
 
 	})();
 
-	if (jQuery) {
-
-		lists.on = function() {
-
+	lists.on = function() {
+		if (jQuery) {
 			var $jq = null;
 			var args = null;
 
@@ -222,11 +226,13 @@ var AutoRelease = (function(jQuery) {
 				'alloc' : alloc,
 				'release' : release
 			};
+		}
 
-		};
+		throw new Error('jQuery have to be set with AutoRelease.jQuery method.');
+	};
 
-		lists.ajax = function() {
-
+	lists.ajax = function() {
+		if (jQuery) {
 			var ajax = null;
 			var org = null;
 
@@ -266,10 +272,10 @@ var AutoRelease = (function(jQuery) {
 				'alloc' : alloc,
 				'release' : release
 			};
+		}
 
-		};
-
-	}
+		throw new Error('jQuery have to be set with AutoRelease.jQuery method.');
+	};
 
 	var AR = function() {
 		this._idx = Math.random();
@@ -301,7 +307,10 @@ var AutoRelease = (function(jQuery) {
 		return this;
 	};
 
-	return AR;
+	AR.jQuery = function(jQ) {
+		jQuery = jQ;
+	};
 
-})(window.jQuery||window.Zepto);
+	return AR;
+}));
 
