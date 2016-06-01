@@ -1,8 +1,10 @@
 (function(factory) {
+  var jQuery = window.jQuery||window.Zepto;
   if (typeof module === 'object' && typeof module.exports === 'object') {
-    module.exports = factory(require('jquery'));
+    jQuery = jQuery || require('jquery');
+    module.exports = factory(jQuery);
   } else {
-    window.Pages = factory(window.jQuery||window.Zepto);
+    window.Pages = factory(jQuery);
   }
 }(function(jQuery) {
   var lists = {
