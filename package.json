@@ -1,6 +1,6 @@
 {
   "name": "auto-release",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "description": "이것저것 수행한 걸 release 메서드 한번 호출로 되돌리거나 무효화 시키기 편하게 구현",
   "main": "src/auto-release.js",
   "scripts": {

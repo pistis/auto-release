@@ -1,7 +1,10 @@
 (function(factory) {
   var jQuery = window.jQuery||window.Zepto;
   if (typeof module === 'object' && typeof module.exports === 'object') {
-    jQuery = jQuery || require('jquery');
+    if (!jQuery && typeof require === 'function') {
+      jQuery = require('jquery');
+      if ('default' in jQuery) { jQuery = jQuery['default']; }
+    }
     module.exports = factory(jQuery);
   } else {
     window.Pages = factory(jQuery);
