@@ -7,7 +7,7 @@
     }
     module.exports = factory(jQuery);
   } else {
-    window.Pages = factory(jQuery);
+    window.AutoRelease = factory(jQuery);
   }
 }(function(jQuery) {
   var lists = {
